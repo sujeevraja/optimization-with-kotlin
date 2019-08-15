@@ -33,6 +33,7 @@ class OrtoolsExample {
         println("Objective value: ${objective.value()}")
         println("x: ${x.solutionValue()}")
         println("y: ${y.solutionValue()}")
+        println("constraint dual: ${ct.dualValue()}")
     }
 
     companion object {
