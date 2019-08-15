@@ -1,4 +1,5 @@
-# solver-examples
+# optimization-with-kotlin
+
 Examples of running different optimization solvers in Kotlin.
 
 ## lp_solve
@@ -26,9 +27,9 @@ show how to setup a Kotlin project with lp_solve.
 - It should have extracted into a new folder with a name like "lp_solve_5.5_java".
 - Copy the file "lp_solve_5.5_java/lib/ux64/liblpsolve55j.so" to C++ libs folder
   ("$HOME/bin/lp_solve/libs" in this example).
-  
+
 #### Pointing Gradle to JAR/library files
-  
+
 Now that the lp_solve files have been prepared, we need to tell Gradle where to find them. Open
 "$HOME/.gradle/gradle.properties" and add the following two lines to the end of the file.
 
@@ -87,9 +88,9 @@ Following instructions are based on this [SO page](https://stackoverflow.com/que
     - com.google.ortools.jar
     - protobuf.jar
     - a bunch of ".a" and ".so" files (many of these are solver libraries).
-  
+
 #### Pointing Gradle to OR-Tools
-  
+
 Now that the lib/JAR files have been prepared, we need to tell Gradle where to find them. Open
 "$HOME/.gradle/gradle.properties" and add the following lines to the end of the file.
 
