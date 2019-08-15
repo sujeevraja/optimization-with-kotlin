@@ -7,6 +7,8 @@ class App {
     fun runExamples() {
         runLpSolveExample()
     }
+
+    val testValue = 2  // for use in a sample test.
 }
 
 fun main() {
