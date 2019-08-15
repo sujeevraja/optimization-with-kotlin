@@ -27,8 +27,8 @@ dependencies {
     compile(files(lpsolveJarPath))
 
     // Include ortools jar in classpath.
-    val ortoolsJarPath: String by project
-    compile(files(ortoolsJarPath))
+    val ortoolsLibPath: String by project
+    compile(files("$ortoolsLibPath/com.google.ortools.jar"))
 
     // Protobuf is a dependency for the Google ortools library. It can be included in the project
     // in the following two ways.
@@ -37,8 +37,7 @@ dependencies {
     // This protobuf jar file is usually in the same folder as com.google.ortools.jar. Here, we
     // don't have to worry about the protobuf version as we are using a jar file packaged with the
     // ortools archive.
-    val protobufJarPath: String by project
-    compile(files(protobufJarPath))
+    compile(files("$ortoolsLibPath/protobuf.jar"))
 
     // Alternative 2: a bit simpler as we don't need to worry about gradle.properties and can
     // directly include protobuf as a dependency just like other libraries. However, we need to be
