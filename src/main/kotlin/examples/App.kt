@@ -4,12 +4,11 @@
 package examples
 
 class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
+    fun runExamples() {
+        runLpSolveExample()
+    }
 }
 
-fun main(args: Array<String>) {
-    println(App().greeting)
+fun main() {
+    App().runExamples()
 }
