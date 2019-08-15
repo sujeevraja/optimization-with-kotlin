@@ -4,12 +4,13 @@
 package examples
 
 class App {
-    val greeting: String
-        get() {
-            return "Hello world."
-        }
+    fun runExamples() {
+        runLpSolveExample()
+    }
+
+    val testValue = 2  // for use in a sample test.
 }
 
-fun main(args: Array<String>) {
-    println(App().greeting)
+fun main() {
+    App().runExamples()
 }
