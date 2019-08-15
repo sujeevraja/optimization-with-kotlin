@@ -22,6 +22,10 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // Include lpsolve jar in classpath.
+    val lpsolveJarPath: String by project
+    compile(files(lpsolveJarPath))
+
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
@@ -32,4 +36,10 @@ dependencies {
 application {
     // Define the main class for the application
     mainClassName = "examples.AppKt"
+
+    // Include folder with lpsolve library files in library path.
+    val lpsolveLibPath: String by project
+    applicationDefaultJvmArgs = listOf(
+        "-Djava.library.path=$lpsolveLibPath"
+    )
 }
